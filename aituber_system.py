@@ -18,16 +18,19 @@ class AITuberSystem:
 
     pass
 
-  def talk_with_comment(self) -> bool:
-    print("コメントを読み込みます")
-    comment = self.youtube_comment_adaptor.get_comment()
+  # def talk_with_comment(self) -> bool:
+  #   print("コメントを読み込みます")
+  #   comment = self.youtube_comment_adaptor.get_comment()
 
-    if comment==None:
-      print("コメントがありません")
-      return False
-    response_text = self.openai_adapter.create_chat(comment)
-    data, rate = self.voice_adapter.get_voice(response_text)
-    self.obs_adapter.set_question(comment)
-    self.obs_adapter.set_answer(response_text)
-    self.play_sound.play_sound(data, rate)
-    return True
+  #   if comment==None:
+  #     print("コメントがありません")
+  #     return False
+  #   response_text = self.openai_adapter.create_chat(comment)
+  #   data, rate = self.voice_adapter.get_voice(response_text)
+  #   self.obs_adapter.set_question(comment)
+  #   self.obs_adapter.set_answer(response_text)
+  #   self.play_sound.play_sound(data, rate)
+  #   return True
+
+class GithubTubver:
+  pass
